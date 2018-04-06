@@ -1,3 +1,132 @@
-body {
+html, body {
+  height: 100%;
+}
+a {
+  text-decoration: none;
+}
+/*lv ha*/
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
+}
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.body_bg {
     background-color: #222d32;
+}
+
+.mt_150 {
+    margin-top: 150px;
+}
+.panel-title {
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+}
+/* index的aside */
+.aside {
+    width:180px;
+    height: 100%;
+    background-color: #222D32;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    transition: all 1s;
+    color: #fff;
+}
+.aside .aside_title{
+    width: 180px;
+    height: 50px;
+    line-height: 50px;
+    display: block;
+    background-color: #367FA9;
+    text-align: center;
+    color: white;
+    font-size: 24px;
+}
+.aside_user {
+    height: 180px;
+    width: 100%;
+    color: #fff;
+}
+.aside_user  img {
+    height: 80px;
+    widows: 80px;
+    border-radius: 50%;
+    margin: 30px 0 15px 0;
+}
+.aside_user p{
+    font-size: 16px;
+}
+
+/* 导航 */
+.aside_nav li{
+    font-size: 14px;
+    border-left: 3px solid transparent;
+}
+.aside_nav li a {
+    line-height: 40px;
+    color: #ccc;
+    margin-left: -30px;
+}
+.aside_nav li .child a{
+    margin-left: -15px;
+    display: block;
+}
+.aside_nav li .child {
+    height: 80px;
+    display: none;
+}
+.aside_nav li.current {
+    color: #fff;
+    border-left: 3px solid #006699;
+    background-color: #1d1f21;
+}
+.navChange {
+    left: -180px;
+}
+ /* main 开始  */
+ .main {
+     background-color:aqua;
+     height: 1000px;
+     width: 100%;
+     padding-top: 50px;
+     padding-left: 180px;
+     transition: all 1s;
+
+ }
+ .main_top {
+    height: 50px;
+    width: 100%;
+    background-color: #3c8dbc;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-left: 180px;
+    transition:all 1s;
+ }
+.main_top a {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    color:#fff;
+    display: block;
+}
+.main_context {
+    /* padding-left: 180px;
+    padding-top: 50px; */
+    width: 100%;
+    height: 100%;
+}
+.main.mainChange {
+  padding-left: 0;
+}
+.main.mainChange .main_top {
+  padding-left: 0;
+}
+.breadcrumb {
+    margin: 20px 0;
 }

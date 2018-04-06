@@ -6,9 +6,56 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="lib/bootstrap-validator/css/bootstrapValidator.css">
+    <link rel="stylesheet" href="lib/nprogress/nprogress.css">
+    <link rel="stylesheet" href="css/common.css">
 </head>
 <body>
-    <div>乐淘</div>
+    <!-- aside 开始 -->
+    <div class="aside text-center">
+        <a href="#" class="aside_title">黑马19期</a>
+        <div class="aside_user text-center">
+            <img src="images/default.jpg" alt="">
+            <p>超级管理员</p>
+        </div>
+        <!-- 导航 -->
+        <div class="aside_nav">
+            <ul>
+                <li class="current"><a href="#"><i class="glyphicon glyphicon-user"></i> 用户管理</a></li>
+                <li>
+                    <a href="#"><i class="glyphicon glyphicon-list"></i>分类管理</a>
+                    <div class="child">
+                        <a href="#"> 一级分类</a>
+                        <a href="#"> 一级分类</a>
+                    </div>
+                </li>
+
+                <li><a href="#"><i class="glyphicon glyphicon-tags"></i> 商品管理</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- main 开始  -->
+    <div class="main">
+        <div class="main_top">
+            <a href="#" class="pull-left text-center"><i class="glyphicon glyphicon-align-justify "></i></a>
+            <a href="#" class="pull-right text-center"><i class="glyphicon glyphicon-log-out"></i></a>
+        </div>
+        <div class="main_context">
+            <div class="container-fluid">
+                <ol class="breadcrumb">
+                  <li><a href="#">管理系统</a></li>
+                  <li class="active">用户管理</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+    <script src="lib/jquery/jquery.min.js"></script>
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+    <script src="lib/nprogress/nprogress.js"></script>
+    <script src="lib/echarts/echarts.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
