@@ -55,7 +55,7 @@ $(function(){
         $("#form").data('bootstrapValidator').resetForm();
     });
     //当表单校验成功时，会触发success.form.bv事件
-    $("#form").on('success.form.bv', function (e) {
+    $("#form").on("success.form.bv" ,function (e) {
         e.preventDefault();
         //使用ajax提交逻辑
         $.ajax({

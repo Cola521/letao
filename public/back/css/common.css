@@ -16,7 +16,9 @@ a:link, a:visited, a:hover, a:active {
 .body_bg {
     background-color: #222d32;
 }
-
+.color-red {
+    color: #A94442;
+}
 .mt_150 {
     margin-top: 150px;
 }
@@ -54,7 +56,7 @@ a:link, a:visited, a:hover, a:active {
 }
 .aside_user  img {
     height: 80px;
-    widows: 80px;
+    width: 80px;
     border-radius: 50%;
     margin: 30px 0 15px 0;
 }
@@ -80,10 +82,11 @@ a:link, a:visited, a:hover, a:active {
     height: 80px;
     display: none;
 }
-.aside_nav li.current {
+.aside_nav .current {
     color: #fff;
     border-left: 3px solid #006699;
     background-color: #1d1f21;
+    display: block;
 }
 .navChange {
     left: -180px;
@@ -129,4 +132,10 @@ a:link, a:visited, a:hover, a:active {
 }
 .breadcrumb {
     margin: 20px 0;
+}
+.table.table-bordered.table-striped.table-hover th,
+.table.table-bordered.table-striped.table-hover td
+ {
+    text-align: center;
+    vertical-align: middle;
 }
