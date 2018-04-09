@@ -59,22 +59,125 @@
             <a href="#" class="pull-left text-center"><i class="glyphicon glyphicon-align-justify "></i></a>
             <a href="#" class="logout pull-right text-center"><i class="glyphicon glyphicon-log-out"></i></a>
         </div>
-        <div class="main_context">
+        <div class="main_context container-fluid">
             <ol class="breadcrumb">
                 <!-- 管理系统 用户管理 -->
-              <li><a href="#">管理系统</a></li>
-              <li class="active">用户管理</li>
+                <li><a href="#">管理系统</a></li>
+              <li><a href="#">分类管理</a></li>
+              <li class="active">二级分类</li>
             </ol>
+            <button class="addBtn btn btn-default" type="button" name="button">
+                添加分类
+            </button>
+            <table class="table table-bordered table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th width = "10%">序号</th>
+                        <th width = "30%">一级分类名称</th>
+                        <th width = "30%">二级分类名称</th>
+                        <th width = "30%">二级分类LOGO</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>11</td>
+                        <td>22</td>
+                        <td>33</td>
+                        <td>44</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="wrap-paginator text-right">
+                <ul id="pagintor">
 
+                </ul>
+            </div>
         </div>
     </div>
 
-    <script src="lib/jquery/jquery.min.js"></script>
+
+
+    <!-- <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+            Dropdown
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+          </ul>
+    </div>
+    <div class="dropup">
+  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-expanded="true"> -->
+<!-- 模态框 -->
+<div class="modal fade secondModal">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">添加分类</h4>
+      </div>
+      <div class="modal-body">
+            <form id="form1">
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                        请选择一级分类
+                      <span class="caret"></span>
+                    </button>
+                    <input type="hidden" name="categoryId" value="">
+                    <ul class="dropdown-menu">
+                        <!-- 挖个坑 -->
+                    </ul>
+                </div>
+                <input class="form-control second_input" type="text" name="brandName" value="" placeholder="请输入二级分类">
+                <div class="dropup">
+                    <label  class="btn btn-default dropdown-toggle" for="fileupload">
+                        上传图片
+                    </label>
+                    <!-- name指定图片上传时的name属性 -->
+                    <!-- data-url指定图片上传时的接口地址 -->
+                    <!-- multiple指定多文件上传 -->
+                    <input id="fileupload" style="display: none;" type="file" name="pic1" value="" data-url="/category/addSecondCategoryPic" multiple>
+                    <div class="img">
+                        <img src="images/none.png" alt="" width="100">
+                        <input type="hidden" name="brandLogo" value="">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary">添加</button>
+                </div>
+            </form>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+    <script type="text/template" id="secondTable">
+      {{ each rows v i }}
+        <tr>
+          <td>{{ (page-1)*size + i+1 }}</td>
+          <td>{{ v.categoryName }}</td>
+          <td>{{ v.brandName }}</td>
+          <td> <img src="{{ v.brandLogo }}" alt=""> </td>
+        </tr>
+      {{ /each }}
+    </script>
+    <script type="text/template" id="first">
+      {{ each rows v i }}
+        <li><a href="#" tabindex="-1" data-id="{{ v.id }}">{{ v.categoryName }}</a></li>
+      {{ /each }}
+    </script>
+    <script src="lib/jquery/jquery.js"></script>
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
     <script src="lib/nprogress/nprogress.js"></script>
     <script src="lib/echarts/echarts.min.js"></script>
+    <script src="lib/artTemplate/template-web.js"></script>
+    <script src="lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
+    <script src="lib/jquery-fileupload/jquery.ui.widget.js"></script>
+    <script src="lib/jquery-fileupload/jquery.fileupload.js"></script>
     <script src="js/common.js"></script>
-    <script src="js/index.js"></script>
+    <script src="js/second.js"></script>
 </body>
 </html>

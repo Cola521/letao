@@ -64,5 +64,27 @@ $(function(){
         ]
     };
     myChart2.setOption(option2);
-
+    $('.logout').on('click',function(){
+        $('#loginModal').modal();
+    });
+    // 模态框
+    $('.modal-footer button:nth-of-type(2)').on('click',function(){
+        $.ajax({
+            data:{},
+            dataType:'json',
+            url:'/employee/employeeLogout',
+            type:'get',
+            success:function(info){
+                console.log(info);
+                if(info.success){
+                    location.href = 'login.html';
+                }else{
+                    alert('错误');
+                }
+            },
+            error:function(){
+                alert('错误')
+            }
+        });
+    });
 });

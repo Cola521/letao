@@ -59,22 +59,78 @@
             <a href="#" class="pull-left text-center"><i class="glyphicon glyphicon-align-justify "></i></a>
             <a href="#" class="logout pull-right text-center"><i class="glyphicon glyphicon-log-out"></i></a>
         </div>
-        <div class="main_context">
+        <div class="main_context container-fluid">
             <ol class="breadcrumb">
-                <!-- 管理系统 用户管理 -->
-              <li><a href="#">管理系统</a></li>
-              <li class="active">用户管理</li>
+                <!-- 管理系统 分类管理 一级分类 -->
+                <li><a href="#">管理系统</a></li>
+                  <li><a href="#">分类管理</a></li>
+                  <li class="active">一级分类</li>
             </ol>
+            <input type="hidden" name="" value="">
+            <button class="btn btn-default" id="addBtn">
+                添加分类
+            </button>
+            <div class="main_table">
+                <table class="table table-bordered table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th width="20%">序号</th>
+                            <th width="80%">一级分类名</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- <tr> -->
+                            <!-- <td>11</td>
+                            <td>22</td> -->
+                        <!-- </tr> -->
+                    </tbody>
+                </table>
+            </div>
+            <div class="first_paginator text-right">
+                <ul id="pagintor">
 
+                </ul>
+            </div>
         </div>
     </div>
-
-    <script src="lib/jquery/jquery.min.js"></script>
+    <!-- 模态框 -->
+    <div class="modal fade" id="addModal">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"></button>
+                <h4 class="modal-title">添加分类</h4>
+              </div>
+              <div class="modal-body">
+                  <form id="form">
+                      <div class="form-group">
+                        <input type="text" class="form-control" name="categoryName" value="" placeholder="请输入一级分类">
+                    </div>
+                    </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button  type="submit" form="form" class="btn btn-primary">添加</button>
+              </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    <script type="text/template" id="firstTable">
+      {{ each rows v i }}
+        <tr>
+          <td>{{ (page-1)*size + i+1 }}</td>
+          <td>{{ v.categoryName }}</td>
+        </tr>
+      {{ /each }}
+    </script>
+    <script src="lib/jquery/jquery.js"></script>
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
     <script src="lib/nprogress/nprogress.js"></script>
     <script src="lib/echarts/echarts.min.js"></script>
+    <script src="lib/artTemplate/template-web.js"></script>
+    <script src="lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
     <script src="js/common.js"></script>
-    <script src="js/index.js"></script>
+    <script src="js/first.js"></script>
 </body>
 </html>
