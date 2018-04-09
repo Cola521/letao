@@ -66,7 +66,7 @@
               <li><a href="#">分类管理</a></li>
               <li class="active">二级分类</li>
             </ol>
-            <button class="addBtn btn btn-default" type="button" name="button">
+            <button class="addBtn;p0 btn btn-default" type="button" name="button">
                 添加分类
             </button>
             <table class="table table-bordered table-striped table-hover">
@@ -94,23 +94,6 @@
             </div>
         </div>
     </div>
-
-
-
-    <!-- <div class="dropdown">
-          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-            Dropdown
-            <span class="caret"></span>
-          </button>
-          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
-            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
-          </ul>
-    </div>
-    <div class="dropup">
-  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-expanded="true"> -->
 <!-- 模态框 -->
 <div class="modal fade secondModal">
   <div class="modal-dialog modal-sm">
@@ -122,32 +105,38 @@
       <div class="modal-body">
             <form id="form1">
                 <div class="dropdown">
-                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
-                        请选择一级分类
-                      <span class="caret"></span>
-                    </button>
-                    <input type="hidden" name="categoryId" value="">
+                    <div class="form-group">
+                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                            请选择一级分类
+                          <span class="caret"></span>
+                        </button>
+                        <input type="hidden" name="categoryId" value="">
+                    </div>
                     <ul class="dropdown-menu">
                         <!-- 挖个坑 -->
                     </ul>
                 </div>
-                <input class="form-control second_input" type="text" name="brandName" value="" placeholder="请输入二级分类">
+                <div class="form-group">
+                    <input class="form-control second_input" type="text" name="brandName" value="" placeholder="请输入二级分类">
+                </div>
                 <div class="dropup">
                     <label  class="btn btn-default dropdown-toggle" for="fileupload">
                         上传图片
                     </label>
-                    <!-- name指定图片上传时的name属性 -->
-                    <!-- data-url指定图片上传时的接口地址 -->
-                    <!-- multiple指定多文件上传 -->
-                    <input id="fileupload" style="display: none;" type="file" name="pic1" value="" data-url="/category/addSecondCategoryPic" multiple>
+                <div class="form-group">
+                        <!-- name指定图片上传时的name属性 -->
+                        <!-- data-url指定图片上传时的接口地址 -->
+                        <!-- multiple指定多文件上传 -->
+                        <input id="fileupload" style="display: none;" type="file" name="pic1" value="" data-url="/category/addSecondCategoryPic" multiple>
                     <div class="img">
                         <img src="images/none.png" alt="" width="100">
                         <input type="hidden" name="brandLogo" value="">
                     </div>
                 </div>
+                </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                    <button type="button" class="btn btn-primary">添加</button>
+                    <button type="submit" class="btn btn-primary">添加</button>
                 </div>
             </form>
     </div><!-- /.modal-content -->

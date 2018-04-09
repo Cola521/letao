@@ -13,7 +13,7 @@ $(function(){
             },
             success:function(info){
                  console.log(info);
-                 total = Math.ceil(info.total/pageSize)
+                 total = Math.ceil(info.total/pageSize);
                  $('.table tbody').html(template('secondTable',info));
                  //分页
                  $("#pagintor").bootstrapPaginator({
@@ -68,7 +68,7 @@ $(function(){
           }
     });
     // 表单效验
-    bootstrapValidator({
+    $('#form1').bootstrapValidator({
     //指定效验时的图标,默认风格
     // 将默认的排除项, 重置掉 (默认会对 :hidden, :disabled等进行排除)
     excluded: [],
@@ -80,28 +80,28 @@ $(function(){
     },
     //指定效验字段
     fields: {
-        //校验用户名，对应name表单的name属性
+        // 校验用户名，对应name表单的name属性
         categoryId:{
             //效验规则
             validators:{
                 //不能为空
                 notEmpty:{
                     message:'不能为空'
-                },
+                }
             }
         },
         brandName:{
             validators:{
                 notEmpty:{
                     message:'不能为空'
-                },
+                }
             }
         },
         brandLogo:{
             validators:{
                 notEmpty:{
                     message:'不能为空'
-                },
+                }
             }
         }
     }
@@ -126,11 +126,11 @@ $(function(){
                render();
 
                // 找到下拉菜单文本重置
-               $('.dropdown button:first-child').text("请选择1级分类<span class='caret'></span>")
+               $('.dropdown button:first-child').text("请选择1级分类<span class='caret'></span>");
 
                // 找到图片重置
-               $('.img img').attr("src", "images/none.png")
+               $('.img img').attr("src", "images/none.png");
             }
         });
-    })
+    });
 });
